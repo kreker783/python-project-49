@@ -1,7 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/kreker783/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/kreker783/python-project-49/actions)
 
-<a href="https://codeclimate.com/github/kreker783/Mind-Games/maintainability"><img src="https://api.codeclimate.com/v1/badges/c78e4a052e8ca4c97b20/maintainability" /></a>
+[![Maintainability](https://api.codeclimate.com/v1/badges/98a66742fa8f947a25f3/maintainability)](https://codeclimate.com/github/kreker783/python-project-49/maintainability)
 
 Brain-even game demo:
 https://asciinema.org/a/603130
