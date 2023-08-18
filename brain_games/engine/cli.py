@@ -10,8 +10,11 @@ def welcome_user():
     print(f"Hello, {name}")
 
 
-def game_ending():
-    print(f"Congratulations, {name}!")
+def game_ending(game_result):
+    if game_result:
+        print(f"Congratulations, {name}!")
+    else:
+        print(f"Let's try again, {name}!")
 
 
 def game_process(message, game):
