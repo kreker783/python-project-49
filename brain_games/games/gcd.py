@@ -1,23 +1,23 @@
 from random import sample
 from math import gcd
-import brain_games.engine.logic as logic
+from brain_games.engine.logic import game_loop
+
+
+def start_game():
+    game_loop(game)
 
 
 def game():
-    count = 0
-    while count < 3:
-        first_number, second_number = sample(range(1, 100), 2)
-        result = get_result(first_number, second_number)
+    first_number, second_number = generate()
+    result = get_result(first_number, second_number)
 
-        answer = logic.get_answer(str(f"{first_number} {second_number}"))
+    expression = str(f"{first_number} {second_number}")
 
-        validation = logic.validate(result, answer)
+    return result, expression
 
-        if validation:
-            count += 1
-        else:
-            return False
-    return True
+
+def generate():
+    return sample(range(1, 100), 2)
 
 
 def get_result(x, y):

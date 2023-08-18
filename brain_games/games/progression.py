@@ -1,22 +1,21 @@
 from random import randint, choice
-import brain_games.engine.logic as logic
+from brain_games.engine.logic import game_loop
+
+
+def start_game():
+    game_loop(game)
 
 
 def game():
-    count = 0
-    while count < 3:
-        start_number = randint(1, 100)
-        difference = randint(1, 10)
+    result, progression = pick_element(get_progression(generate()))
 
-        result, progression = pick_element(get_progression(start_number, difference))
+    return result, progretion
 
-        validation = logic.validate(result, logic.get_answer(progression))
 
-        if validation:
-            count += 1
-        else:
-            return False
-    return True
+def generate():
+    start_number = randint(1, 100)
+    difference = randint(1, 10)
+    return start_number, difference
 
 
 def get_progression(a, d, n=9):

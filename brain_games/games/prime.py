@@ -1,20 +1,20 @@
 from random import randint
-import brain_games.engine.logic as logic
+from brain_games.engine.logic import game_loop
+
+
+def start_game():
+    game_loop(game)
 
 
 def game():
-    count = 0
-    while count < 3:
-        number = randint(1, 100)
-        result = is_prime(number)
+    number = generate()
+    result = is_prime(number)
 
-        validation = logic.validate(result, logic.get_answer(number))
+    return result, number
 
-        if validation:
-            count += 1
-        else:
-            return False
-    return True
+
+def generate():
+    return randint(1, 100)
 
 
 def is_prime(x):

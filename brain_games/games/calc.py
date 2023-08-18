@@ -1,24 +1,25 @@
 from random import sample, choice
 from operator import add, mul, sub
-import brain_games.engine.logic as logic
+from brain_games.engine.logic import game_loop
+
+
+def start_game():
+    game_loop(game)
 
 
 def game():
-    count = 0
-    while count < 3:
-        first_number, second_number = sample(range(1, 100), 2)
-        operation = choice([add, sub, mul])
-        result = operation(first_number, second_number)
+    first_number, second_number, operation = generate()
+    result = operation(first_number, second_number)
 
-        expression = get_expression(first_number, second_number, operation)
+    expression = get_expression(first_number, second_number, operation)
 
-        validation = logic.validate(result, logic.get_answer(expression))
+    return result, expression
 
-        if validation:
-            count += 1
-        else:
-            return False
-    return True
+
+def generate():
+    first_number, second_number = sample(range(1, 100), 2)
+    operation = choice([add, sub, mul])
+    return first_number, second_number, operation
 
 
 def get_expression(first_number, second_number, op):

@@ -17,6 +17,15 @@ def get_answer(question):
     return answer
 
 
-# def game_loop():
-#     # count = 0
-#     # while count < 3:
+def game_loop(game):
+    count = 0
+    while count < 3:
+        result, expression = game()
+
+        validation = validate(result, get_answer(expression))
+
+        if validation:
+            count += 1
+        else:
+            return False
+    return True
