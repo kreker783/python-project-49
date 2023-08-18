@@ -22,5 +22,4 @@ def game_process(message, game):
 
     print(message)
 
-    if game():
-        game_ending()
+    game_ending(game())
