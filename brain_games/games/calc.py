@@ -13,7 +13,7 @@ def game():
 
     expression = get_expression(first_number, second_number, operation)
 
-    return result, expression
+    return str(result), expression
 
 
 def generate():
