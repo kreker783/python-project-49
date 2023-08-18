@@ -3,7 +3,8 @@ from brain_games.games.even import start_game
 
 
 def main():
-    game_process('Answer "yes" if the number is even, otherwise answer "no".', start_game)
+    message = 'Answer "yes" if the number is even, otherwise answer "no".',
+    game_process(message, start_game)
 
 
 if __name__ == "__main__":

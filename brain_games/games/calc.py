@@ -15,7 +15,7 @@ def game():
 
     if result < 0:
         result = str(result)
-        
+
     return result, expression
 
 

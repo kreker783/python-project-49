@@ -7,8 +7,8 @@ def start_game():
 
 
 def game():
-    start_number, difference = generate()
-    result, progression = pick_element(get_progression(start_number, difference))
+    start_number, diff = generate()
+    result, progression = pick_element(get_progression(start_number, diff))
 
     return result, progression
 
@@ -21,7 +21,7 @@ def generate():
 
 def get_progression(a, d, n=9):
     result = [a]
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
         a = a + d
         result.append(a)
     return result

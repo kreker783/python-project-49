@@ -3,7 +3,8 @@ from brain_games.games.prime import start_game
 
 
 def main():
-    game_process('Answer "yes" if given number is prime. Otherwise answer "no".', start_game)
+    message = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+    game_process(message, start_game)
 
 
 if __name__ == "__main__":
