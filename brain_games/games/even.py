@@ -14,7 +14,7 @@ def game():
 
 
 def generate():
-    return randint(1, 100)
+    return randint(2, 100)
 
 
 def is_even(number):
