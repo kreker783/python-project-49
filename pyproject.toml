@@ -1,8 +1,14 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
-authors = ["Ed-Host <kreker783@gmail.com>"]
+description = "Project contain 5 simple games"
+authors = ["Edhard Sypa"]
+repository = "https://github.com/kreker783/python-project-49"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Topic :: Games/Entertainment",
+    "Framework :: Flake8"
+]
 readme = "README.md"
 packages = [{include = "brain_games"}]
 
