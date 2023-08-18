@@ -1,5 +1,5 @@
 def validate(result, answer):
-    if result == answer:
+    if str(result) == str(answer):
         print("Correct!")
         return True
 

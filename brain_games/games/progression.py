@@ -3,7 +3,7 @@ from brain_games.engine.logic import game_loop
 
 
 def start_game():
-    game_loop(game)
+    return game_loop(game)
 
 
 def game():
